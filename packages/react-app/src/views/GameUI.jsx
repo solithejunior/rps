@@ -72,9 +72,9 @@ export default function GameUI({
   if (currentUIState === UIState.ResultPhase) {
     if (gameResult === GameResult.Draw) gameStateMessage = "It's a draw!";
     else if ((isPlayer1 && gameResult === GameResult.P1Win) || (!isPlayer1 && gameResult === GameResult.P2Win)) {
-      gameStateMessage = "You won!";
+      gameStateMessage = "🏆 You won! 🎉🎉";
     } else {
-      gameStateMessage = "You lost!";
+      gameStateMessage = "😞 You lost!";
     }
   }
 
@@ -173,14 +173,14 @@ export default function GameUI({
         ⚙️ Here is an example UI that displays and sets the purpose in your smart contract:
       */}
       <div style={{ border: "1px solid #cccccc", padding: 16, width: 500, margin: "auto", marginTop: 64 }}>
-        <h2>Rock Paper Scissors</h2>
+        <h1>Rock Paper Scissors</h1>
         <Divider />
         <h2>Active Game</h2>
         {activeGame === "0x0000000000000000000000000000000000000000" || !activeGameData ? (
           <h3>-</h3>
         ) : (
           <>
-            <Address address={activeGame} ensProvider={mainnetProvider} fontSize={16} />
+            <Address address={activeGame} ensProvider={mainnetProvider} fontSize={18} />
             <Row>
               <Col
                 span={12}
@@ -334,8 +334,8 @@ export default function GameUI({
             <div style={{ margin: 8 }}>
               <h2>Game State</h2>
               <h1>{gameStateMessage}</h1>
-              <Button style={{ marginTop: 8 }} onClick={leaveGame}>
-                New Game
+              <Button style={{ marginTop: 8 }} size="large" onClick={leaveGame}>
+                New Game 🔁
               </Button>
             </div>
             <Divider />
