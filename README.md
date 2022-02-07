@@ -2,6 +2,7 @@
 
 This tutorial guides you through building a Rock Paper Scissors smart contract and dApp frontend with Scaffold Eth.
 
+For a better formatted version of this tutorial, viwe it at https://jadenkore.medium.com/building-a-rock-paper-scissors-smart-contract-with-scaffold-eth-12fe6f90d673
 
 ## Setup
 
