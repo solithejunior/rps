@@ -91,11 +91,6 @@ contract RockPaperScissors {
         // Set game phase to initial join phase
         games[gameHash].gameState = GameState.JoinPhase;
 
-        games[gameHash].revealDeadline =
-            block.timestamp +
-            30 seconds -
-            block.timestamp;
-
         // Set P1 active game to game hash
         activeGame[msg.sender] = gameHash;
 
